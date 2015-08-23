@@ -1,0 +1,1222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+    >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#0BE" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/controlbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/init" />
+
+                <TextView
+                    android:id="@+id/interval_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Interval:" />
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:imeOptions="actionSend"
+                    android:inputType="number" />
+                <TextView
+       
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(s)" />
+                
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#696969" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#0BE" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/Orientation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_oriHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/oriAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_oriA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_oriA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_oriB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_oriB"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout07"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="gravity" >
+
+                        <TextView
+                            android:id="@+id/TextView_oriC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_oriC"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_orien"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="Time Interval" />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textorien_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Counter" />
+
+                        <TextView
+                            android:id="@+id/Textorien_counter_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:textAlignment="viewEnd"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_counter_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="textEnd"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_counter_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="textEnd"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textorien_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Average value" />
+
+                        <TextView
+                            android:id="@+id/Textorien_avg_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_avg_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_avg_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_orien_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Deviation value" />
+
+                        <TextView
+                            android:id="@+id/Textorien_devi_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_devi_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textorien_devi_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Acceleration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_accHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/accAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout08"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_accA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_accA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout09"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_accB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_accB"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_accC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_accC"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_acc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold"
+                        android:layout_marginRight = "40dp" />
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval"
+                             android:layout_marginRight = "40dp"  />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_acc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/acc_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textacc_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Counter" />
+
+                        <TextView
+                            android:id="@+id/Textacc_counter_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_counter_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_counter_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/acc_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textacc_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Average value" />
+
+                        <TextView
+                            android:id="@+id/Textacc_avg_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_avg_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_avg_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/acc_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_acc_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Deviation value" />
+
+                        <TextView
+                            android:id="@+id/Textacc_devi_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_devi_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textacc_devi_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Magnetic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_magHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/magAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_magA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_magA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_magB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_magB"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_magC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_magC"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_mag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval" 
+                             android:layout_marginRight = "40dp" />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_mag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mag_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textmac_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Counter" />
+
+                        <TextView
+                            android:id="@+id/Textmag_counter_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_counter_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_counter_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mag_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textmag_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Average value" />
+
+                        <TextView
+                            android:id="@+id/Textmag_avg_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_avg_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_avg_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mag_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_mag_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Deviation value" />
+
+                        <TextView
+                            android:id="@+id/Textmag_devi_x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_devi_y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <TextView
+                            android:id="@+id/Textmag_devi_z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_ligHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ligAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutLightBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_ligA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_ligA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_light"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/light_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval" 
+                             android:layout_marginRight = "40dp" />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Orientation_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textlight_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Counter" />
+
+                        <TextView
+                            android:id="@+id/Textlight_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/light_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textlight_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Average value" />
+
+                        <TextView
+                            android:id="@+id/Textlight_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/light_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_light_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Deviation value" />
+
+                        <TextView
+                            android:id="@+id/Textlight_devi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Proximity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_proxHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/proxAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutProxBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_proxA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_proxA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_proxi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/proxi_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval"
+                             android:layout_marginRight = "40dp"  />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_proxi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/proxi_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textproxi_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Counter" />
+
+                        <TextView
+                            android:id="@+id/Textproxi_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/proxi_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textproxi_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Average value" />
+
+                        <TextView
+                            android:id="@+id/Textproxi_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/proxi_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_proxi_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:text="Deviation value" />
+
+                        <TextView
+                            android:id="@+id/Textproxi_devi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Pressure"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_presHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/presAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutPresBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_presA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_presA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_pressure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/pressure_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval"
+                             android:layout_marginRight = "40dp"  />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_pres"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pressure_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textpressure_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:text="Counter" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Textpressure_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pressure_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Textpressure_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Average value" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Textpressure_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pressure_deviation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                        <TextView
+                            android:id="@+id/Text_pressure_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deviation value" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Textpressure_devi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Temperature"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView_tempHead"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sensor found"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tempAccuracy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutTempBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_tempA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressBar_tempA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="121dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="10dp"
+                            android:progressDrawable="@drawable/myprogressbar" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/TextView_statis_temp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Statistical Data"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/temp_Interval"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time Interval" 
+                             android:layout_marginRight = "40dp" />
+
+                        <TextView
+                            android:id="@+id/TextView_TInterval_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/temp_counter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Texttemp_counter_tag"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:text="Counter" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Texttemp_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/temp_average"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Texttemp_average_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Average value" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Texttemp_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/temp_devi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/Texttemp_devi_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Average value" 
+                             android:layout_marginRight = "30dp" />
+
+                        <TextView
+                            android:id="@+id/Texttemp_devi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:width="150px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Overview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TextView
+                        android:id="@+id/TextViewOverview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</ScrollView>
